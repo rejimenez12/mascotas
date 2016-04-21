@@ -14,7 +14,12 @@ class VisitantesController < ApplicationController
 
   # GET /visitantes/new
   def new
+
+    Rails.logger.debug "DEBUG:entrando al metodo new"
+
     @visitante = Visitante.new
+
+    Rails.logger.debug "DEBUG: Nombre del usuario" + @visitante.nombre
   end
 
   # GET /visitantes/1/edit
